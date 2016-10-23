@@ -1,0 +1,305 @@
+@placeholder: #000;
+.block-form-sign-up {
+    .__clearfix();
+    position: absolute;
+    right: 2px;
+    display: inline-block;
+    top: -70px;
+    padding: 17px 7px 12px 9px;
+    width: 232px;
+    z-index: 10;
+    height: auto;
+    background: #222427;
+    background: linear-gradient(to bottom, #222427 0%, #222426 100%);
+    ::-webkit-input-placeholder {
+        color: @placeholder;
+        font-family: dosissemibold;
+    }
+    ::-moz-placeholder {
+        color: @placeholder;
+        font-family: dosissemibold;
+    }
+    /* Firefox 19+ */
+    :-moz-placeholder {
+        color: @placeholder;
+        font-family: dosissemibold;
+    }
+    /* Firefox 18- */
+    :-ms-input-placeholder {
+        color: placeholder;
+    }
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"] {
+    background: #fff;
+  border: 1px solid #848484;
+  width: 100%;
+  font: 400 0.75rem/1.6 dosissemibold;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin: 0;
+  padding: 4px 0 0.05em 4px;
+  min-width: 200px;
+        @media @point-1000-max {
+            padding: 0.45em;
+        }
+        @media @point-840-max {
+            
+        }
+        
+    }
+    input[type="number"],
+    input[type="text"] {}
+    .row {
+  margin: 0 0 6px 0;
+  position: relative;
+  /* height: 34px; */
+  clear: both;
+        &::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    }
+    .row-code-country,
+    .row-phone {
+        margin: 0 0 6px 0;
+        position: relative;
+        &::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    }
+    .row-code-country {
+  clear: both;
+  width: 25%;
+  float: left;
+  margin: 0 0.4em 0 0;
+        @media @point-1000-max {
+            width: 100%;
+            margin: 0.125em 0 0.188em 0;
+        }
+        @media @point-450-max {
+            margin: 0.1em 0;
+        }
+    }
+    .row-phone {
+  width: 72%;
+  float: left;
+        @media @point-1000-max {
+            width: 70%;
+        }
+        @media @point-450-max {
+            width: 100%;
+        }
+    }
+    .row-submit {
+        padding: 14px 0 0 0;
+    }
+    .submit {
+        font: 500 36px/1.1 dosismedium;
+        background: #f50505;
+        background: linear-gradient(to bottom, #f50505 0%, #fb053f 100%);
+        padding: 5px 0 6px 0;
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        letter-spacing: 0.03em;
+        border-radius: 5px;
+        box-shadow: 0px 5px 0px 0px #a01213;
+        &:hover {
+            background: #fb053f;
+            background: linear-gradient(to bottom, #fb053f 0%, #f50505 100%);
+        }
+        &:active {
+            top: 1px;
+        }
+    }
+    @media @point-1000-max {
+        background: transparent;
+        position: relative;
+        top: auto;
+        float: left;
+        right: auto;
+        width: 77%;
+        margin: 0;
+        clear: initial;
+        padding: 1em 0;
+        .row {
+            margin: 0.125em 0 0.188em 0;
+            float: left;
+            width: 100%;
+        }
+        .row-country {
+            clear: both;
+            width: 100%;
+        }
+        .row-phone {
+            clear: both;
+            width: 100%;
+            margin: 0.125em 0 0.188em 0;
+        }
+        .row-email {
+            width: 100%;
+        }
+        .row-submit {
+            width: 100%;
+        }
+    }
+    @media @point-450-max {
+        .row-phone,
+        .row-email {
+            width: 100%;
+              margin: 0.1em 0;
+        }
+        .row {
+            margin: 0.1em 0;
+        }
+        .row-first-name {
+        }
+    }
+    @media @point-840-max {
+        width: 100%;
+    }
+}
+
+.form-slogan {
+  font: 400 2.45em/1.1 'dosissemibold', arial, sans-serif;
+  color: #e1e1e1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+
+.form-register {
+    position: relative;
+    @media @point-1000-max {
+        float: left;
+        padding: 15px;
+        width: 53%;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, #303335 0%, #34383b 100%);
+    }
+    @media @point-840-max {
+        width: 50%;
+    }
+    @media @point-670-max {
+        padding: 10px;
+        width: 57%;
+    }
+    @media @point-590-max {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+.form-register-notice {
+    padding: 22px 0 0 0;
+    position: relative;
+    p {
+        color: #2d8ff2;
+        font: 400 1.33em/1.1 dosismedium;
+        @media @point-1000-max {
+            font-size: 1.3rem;
+        }
+    }
+    ul {
+        margin: 20px 0;
+        @media @point-1000-max {
+            margin: 15px 0;
+        }
+    }
+    li {
+        font: 400 14px/1.3 @dosisregular;
+        color: #fff;
+        margin: 0 0 16px 0;
+        padding: 2px 0 0 20px;
+        position: relative;
+        &::before {
+            background: url('../../resources/img/sprite-new-opt.png') no-repeat -62px -113px;
+            width: 15px;
+            height: 16px;
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &:last-child {
+            margin: 0;
+        }
+        @media @point-1000-max {
+            padding: 0 0 0 1.5em;
+            margin: 0 0 7px 0;
+        }
+    }
+    @media @point-1000-max {
+        float: left;
+        padding: 0.8em 0 0 1em;
+        width: 47%;
+    }
+    @media @point-670-max {
+        padding: 0.2em 0 0 0.5em;
+        width: 43%;
+    }
+    @media @point-590-max {
+        width: 100%;
+        br {
+            display: none;
+        }
+    }
+}
+
+.form-safe {
+    text-align: center;
+}
+
+.form-ssl {
+    background: url('../../resources/img/sprite-new-opt.png') no-repeat -107px -182px;
+    width: 56px;
+    height: 19px;
+    display: inline-block;
+    opacity: 0.3;
+    margin: 0 12px 0 0;
+}
+
+.form-hacker-safe {
+    background: url('../../resources/img/sprite-new-opt.png') no-repeat -107px -266px;
+    width: 53px;
+    height: 18px;
+    display: inline-block;
+    opacity: 0.3;
+}
+
+.form-verisign {
+    background: url('../../resources/img/sprite-new-opt.png') no-repeat -107px -219px;
+    width: 80px;
+    height: 24px;
+    display: inline-block;
+    opacity: 0.3;
+    margin: 0 7px 0 0;
+}
+
+
+
+.wrapper-testimonial-bg-money {
+    background: #141517;
+    border-top: 1px solid #141517;
+    background: linear-gradient(to bottom, #141517 0%, #232528 100%);
+    padding: 0 0 20px 0;
+}
+
+.outer-bg-money {
+    background: #1f2123;
+}
+
+.wrapper-inner {
+    position: relative;
+    //background: url('../../resources/img/bg-m.png') no-repeat center bottom;
+}

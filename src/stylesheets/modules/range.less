@@ -1,0 +1,351 @@
+.wrapper-range {
+	background: url('../../resources/img/bg-bottom.png') no-repeat center #000;
+	@media @point-760-max {
+		background-image: none;
+	}
+}
+
+.wrap-range {
+    //background: #000;
+}
+
+.range-outer {
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    @media @point-1340-max {
+			display: table-cell;
+			width: 100%;
+    }
+    @media @point-760-max {
+    	display: block;
+    }
+}
+
+.range-graph-block {
+    float: left;
+    width: 446px;
+    @media @point-1340-max {
+    	width: 35%;
+    }
+    @media @point-1000-max {
+    	width: 45%;
+    }
+    img {
+    	max-width: 100%;
+    }
+
+    @media @point-760-max {
+    	display: block;
+    	width: 100%;
+    }
+}
+
+.range-description
+ {
+    float: left;
+    padding: 1.375em 0 0 0;
+    h2 {
+        background: url(../../resources/img/slogan-bg-center.png) left top repeat-x;
+        font: 700 1.688em/0.85 @dosismedium;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 2px 2px 2px #5a1313;
+        min-height: 53px;
+        float: left;
+padding: 11px;
+
+        letter-spacing: 0.02em;
+        @media @point-1000-min {
+        text-indent: -17px;
+                padding: 7px 0 0 0;
+        }
+        @media @point-1000-max {
+        padding: 11px 4px;
+        font-size: 1.3em;	
+        float: none;
+        }
+
+        @media @point-900-max {
+
+        font-size: 1.2em;	
+        }
+        @media @point-760-max {
+
+          font: 700 1.5em/1.2 @dosismedium;
+  min-height: initial;
+  background: #f32020;
+  padding: 5px;
+        }
+    }
+    p {
+        font: 400 1.124em/1 @dosisregular;
+			  margin: 0 0 1.31em 0;
+			  color: #fff;
+			  @media @point-1000-min {
+			         font-size: 1.1em;
+			  margin: 0 0 1.1em 0; 	
+			  }
+			  @media @point-760-max {
+	font: 400 1.32em/1.2 @dosisregular;
+  margin: 0.5em 0 0.9em 0;	
+			  }
+			}
+      @media @point-1340-max {
+    	width: 65%;
+    }
+      @media @point-1250-max {
+    	font-size: 0.9em;
+    }
+      @media @point-1000-max {
+    	width: 55%;
+    }
+    @media @point-760-max {
+    	width: 100%;
+    }
+}
+
+.range-description-slogan-outer {
+    margin: 0 0 1.750em 0;
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    @media @point-1250-max {
+    	margin: 0 0 0.5em 0;
+    }
+}
+
+.range-description-slogan {
+
+	@media @point-1000-min {
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        float: left;
+    }
+    &::before {
+        background: url('../../resources/img/sprite-new-opt.png') no-repeat -107px -102px;
+        width: 33px;
+        height: 54px;
+    }
+    &::after {
+        background: url('../../resources/img/sprite-new-opt.png') no-repeat -145px -102px;
+        width: 32px;
+        height: 53px;
+    }
+   }
+}
+
+.wrapper-options {
+    background: #3b3e3d;
+    padding: 13px 0;
+}
+
+.options-list {
+    display: table;
+    width: 100%;
+    @media @point-760-max {
+    	display: block;
+    	text-align: center;
+    }
+    li {
+        display: table-cell;
+        border-right: 1px solid #4c5452;
+        color: #fff;
+        text-align: center;
+        vertical-align: top;
+        opacity: 0.5;
+        padding: 0 10px;
+        width: 185px;
+        &:first-child {
+            border-left: 1px solid #4c5452;
+                    @media @point-760-max {
+        	border: none;
+        }
+        }
+        @media @point-760-max {
+        	display: inline-block;
+        	border: none;
+        	margin: 0 0 10px 0;
+        }
+        @media @point-450-max {
+width: 130px;
+        }
+    }
+    .option-name {
+  font: 600 0.875rem/1 Calibri, @dosisregular;
+  text-transform: uppercase;
+    }
+    .options-description {
+  font: 400 0.72rem/1 Calibri, @dosisregular;
+  color: rgba(255, 255, 255, 0.51);
+    }
+    .option-name {
+        color: rgba(255, 255, 255, 0.51);
+        margin: 0 0 5px 0;
+        &::before {
+            background: url('../../resources/img/sprite-new-opt.png') no-repeat 0 0;
+            content: '';
+            display: block;
+            height: 46px;
+            margin: 0 auto 5px;
+        }
+    }
+    .option-binary {
+        &::before {
+            background-position: -18px -44px;
+            width: 32px;
+        }
+    }
+    .option-follow {
+        &::before {
+            background-position: -132px -40px;
+            width: 68px;
+        }
+    }
+    .option-long-trem {
+        &::before {
+            background-position: -326px -43px;
+            width: 44px;
+        }
+    }
+    .option-60 {
+        &::before {
+            background-position: -499px -39px;
+            width: 67px;
+        }
+    }
+    .option-one {
+        &::before {
+            background-position: -689px -40px;
+            width: 38px;
+        }
+    }
+    .option-ladder {
+        &::before {
+            background-position: -867px -40px;
+            width: 54px;
+        }
+    }
+    .option-forex {
+        &::before {
+            background-position: -1052px -40px;
+            width: 52px;
+        }
+    }
+}
+
+.footer-technologies {
+    background: #f3f3f3;
+    padding: 5px 0 30px;
+    .img-tech {
+        background: url('../../resources/img/sprite-new-opt.png') no-repeat left top transparent;
+    }
+    .mastercard {
+        background-position: -4px -8px;
+        width: 31px;
+        height: 20px;
+    }
+    .maestro {
+        background-position: -41px -11px;
+        width: 30px;
+        height: 17px;
+    }
+    .diners {
+        background-position: -115px -10px;
+        width: 22px;
+        height: 25px;
+    }
+    .am-express {
+        background-position: -142px -11px;
+        width: 47px;
+        height: 15px;
+    }
+    .visa {
+        background-position: -80px -11px;
+        width: 27px;
+        height: 18px;
+    }
+    .wiretransfer {
+        background-position: -200px -9px;
+        width: 67px;
+        height: 18px;
+    }
+    .nasdag {
+        background-position: -355px -12px;
+        width: 71px;
+        height: 13px;
+    }
+    .reuters {
+        background-position: -507px -13px;
+        width: 74px;
+        height: 16px;
+    }
+    .class-18 {
+        background-position: -691px -14px;
+        width: 24px;
+        height: 11px;
+    }
+    .london {
+        background-position: -275px -10px;
+        width: 71px;
+        height: 15px;
+    }
+    .dowjones {
+        background-position: -436px -14px;
+        width: 65px;
+        height: 13px;
+    }
+    .hz {
+        background-position: -593px -13px;
+        width: 92px;
+        height: 15px;
+    }
+    .ssl {
+        background-position: -724px -10px;
+        width: 48px;
+        height: 19px;
+    }
+    .hsbc {
+        background-position: -776px -12px;
+        width: 80px;
+        height: 13px;
+    }
+    .bank {
+        background-position: -864px -11px;
+        width: 81px;
+        height: 14px;
+    }
+    .ubs {
+        background-position: -959px -11px;
+        width: 42px;
+        height: 16px;
+    }
+}
+
+.technologies-list {
+    text-align: center;
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 2px;
+    }
+    span {
+        display: inline-block;
+    }
+}
+
+.copyright {
+    text-align: center;
+    background-color: #2578cc;
+    padding: 7px;
+    p {
+          font: 400 0.8rem/1 @dosisregular;
+  color: #fff;
+}
+}

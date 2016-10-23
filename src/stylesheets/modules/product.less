@@ -1,0 +1,211 @@
+.b-product-wrapper {
+    text-align: center;
+    font-size: 0;
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.b-product {
+    position: relative;
+    font-size: 16px;
+    width: 265px;
+    min-height: 300px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    &_thumb {
+        font-size: 16px;
+    }
+    &_show-more-mob {
+        @media @desktop-max {
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            text-align: center;
+            bottom: 0px;
+            width: 100%;
+            a {
+                background-color: rgba(0, 0, 0, 0.64);
+                display: block;
+                font-weight: 600;
+                font-size: 1.2em;
+                color: #8ae6cf;
+                padding: 20px 0;
+                text-transform: uppercase;
+            }
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.81);
+        }
+        @media @desktop-min {
+            display: none;
+        }
+    }
+    &_slogan {
+        font: 600 0.75em/1.3 Oswald, sans-serif;
+        text-transform: uppercase;
+        color: #282828;
+        padding: 13px 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        @media @desktop-max {
+            font-size: 1.1em;
+            padding: 10px 0 5px;
+        }
+    }
+    &_price-block {
+        color: #282828;
+        font-size: 0;
+        padding: 3px 3px 4px 7px;
+        font-weight: 700;
+        z-index: 5;
+        @media @desktop-min {
+            position: absolute;
+            bottom: 70px;
+            background: #8ae6cf;
+            right: 0;
+        }
+        @media @desktop-max {
+            padding: 5px 0 0px;
+            margin: 0 0 20px 0;
+        }
+        @media @mobile-max {
+            font-size: 1em;
+            padding: 5px 0 0px;
+            margin: 0 0 20px 0;
+        }
+    }
+    &_price,
+    &_price-new {
+        font-size: 0;
+        span {
+            font-size: 16px;
+            @media @desktop-max {
+                font-size: 21px;
+            }
+        }
+    }
+    &_price-new {
+        color: #ce2c52;
+        margin: 0 0 0 15px;
+    }
+    &_price-crossed {
+        text-decoration: line-through;
+    }
+    .product-front,
+    .product-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+    }
+    .product-front {
+        z-index: 1;
+    }
+    &:hover {
+        .product-back {
+            z-index: 2;
+        }
+    }
+    @media @desktop-min {
+        margin-right: 20px;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        .product-back {
+            &_show-more-desktop {
+                background: #8ae6cf;
+                color: #2c303d;
+                padding: 5px 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                a {
+                    cursor: pointer;
+                    color: inherit;
+                    display: inline-block;
+                    font-weight: 600;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &:hover {
+                    background: #b9fbea;
+                    color: #1e1f1e;
+                }
+            }
+        }
+        .product-front,
+        .product-back {
+            height: 250px;
+        }
+    }
+    @media @desktop-max {
+        margin: 0 10px;
+        width: 300px;
+        .product-back {
+            &_show-more-desktop {
+                display: none;
+            }
+        }
+    }
+    @media @mobile-max {
+        width: 280px;
+    }
+}
+
+.b-product-preview {
+    height: 255px;
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        @media @desktop-max {
+            width: 300px;
+        }
+        @media @mobile-max {
+            width: 280px;
+            height: auto;
+        }
+    }
+    @media @desktop-max {
+        height: 285px;
+        overflow: hidden;
+    }
+    @media @mobile-max {
+        height: 265px;
+        overflow: hidden;
+    }
+}
+
+.b-product-banner-top {
+    position: relative;
+    display: table;
+    width: 100%;
+    img {
+        @media @tablet-max-s {
+            width: 100%;
+        }
+        display: none\0;
+    }
+    &_slogan {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        font: 600 60px/1 Tahoma, sans-serif;
+        letter-spacing: 16px;
+        text-transform: uppercase;
+        vertical-align: middle;
+        transform: translate(-50%, -50%);
+    }
+    &_inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

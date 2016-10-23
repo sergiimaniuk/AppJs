@@ -1,0 +1,446 @@
+@import "range";
+@import "bitcoints";
+@import "block-form-sign-up";
+@import "header";
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    @media @point-1340-max {
+        max-width: 1180px;
+    }
+    @media @point-1250-max {
+        max-width: 1050px;
+    }
+    @media @point-1100-max {
+        max-width: 1000px;
+        margin: 0 15px;
+    }
+    @media @point-1000-max {
+        max-width: 999px;
+        font-size: 0.85em;
+    }
+}
+
+.content {
+    padding: 1.2em 0 0 0;
+    position: relative;
+    @media @point-1366-max {
+        padding: 1.1em 0 0 0;
+    }
+    @media @point-1000-max {
+        padding: 0.5em 0 0 0;
+    }
+}
+
+.wrapper-tablet {
+    float: left;
+    @point-1000-max {
+        float: none;
+        clear: both;
+    }
+}
+
+.head-slogan {
+    width: 828px;
+    float: left;
+    h1 {
+        color: #2e90f4;
+        font: 400 2.438em/0.85 @euro_capsregular;
+        text-transform: uppercase;
+        margin: 0 0 0.1em 0;
+    }
+    h2 {
+        color: #2e90f4;
+        font: 400 3.875em/0.85 @euro_capsregular;
+        text-transform: uppercase;
+        letter-spacing: 0.006em;
+        margin: 0 0 0.07em 0;
+        @media @point-1250-max {
+            font-size: 2.6em;
+        }
+    }
+    p {
+        font: 400 1.125em/1.4 @dosissemibold;
+        color: #e1e1e1;
+    }
+    @media @point-1340-max {
+        font-size: 0.9em;
+        width: 760px;
+    }
+    @media @point-1250-max {
+        width: 600px;
+    }
+    @media @point-1100-max {
+        width: 530px;
+    }
+    @media @point-1000-max {
+        width: 100%;
+        p {
+            font: 400 1.3em/1.4 @dosissemibold;
+            margin: 0.5em 0 0 0;
+            @media @point-840-max {
+                font-size: 1.2em;
+                br {
+                    display: none;
+                }
+            }
+            @media @point-840-max {
+                font-size: 1.5em;
+            }
+        }
+    }
+    @media @point-840-max {
+        width: 75%;
+    }
+    @media @point-670-max {
+        font-size: 0.85em;
+        width: 69%;
+    }
+    @media @point-450-max {
+        font-size: 0.67em;
+        width: 70%;
+    }
+}
+
+.block-description-bitcoints {
+    width: 460px;
+    clear: both;
+    @media @point-1340-max {
+        width: 430px;
+        font-size: 0.96em;
+    }
+    @media @point-1250-max {
+        width: 75%;
+    }
+    @media @point-1000-max {
+        width: auto;
+    }
+    @media @point-760-max {
+        font-size: 1em;
+    }
+}
+
+.block-testimonial-value {
+    position: relative;
+    border-bottom: 6px solid #434345;
+    .__clearfix();
+    @media @point-1250-min {
+        display: table;
+        width: 100%;
+    }
+    @media @point-1250-max {
+        display: inline-block;
+    }
+    @media @point-1000-max {
+        display: table;
+    }
+    @media @point-760-max {
+        //width: 100%;
+        font-size: 3em;
+    }
+    @media @point-590-max {
+        width: 100%;
+        font-size: 2em;
+    }
+    .testimonial-cell {
+        @media @point-1250-min,
+        @point-1000-max {
+            display: table-cell;
+        }
+    }
+    .money-block-cell {
+        vertical-align: middle;
+        text-align: left;
+        @media @point-1250-max {
+            text-align: left;
+            float: left;
+            padding: 5px 0;
+        }
+        @media @point-1000-max {
+            float: none;
+        }
+    }
+    .money-block {
+        color: #fff;
+        text-align: center;
+    }
+    .money-currency {
+        vertical-align: top;
+        font: 400 26px/0.6 @euro_capsregular;
+        position: relative;
+    }
+    .money-count {
+        font: 400 3.938em/0.6 @euro_capsregular;
+        @media @point-1000-max {
+            font-size: 3.8em;
+        }
+        @media @point-900-max {
+            font-size: 3em;
+        }
+        @media @point-760-max {
+            font-size: 1.5em;
+        }
+    }
+    .money-down-cell {
+        vertical-align: middle;
+        @media @point-1250-max {
+            float: left;
+            padding: 10px 0;
+        }
+        @media @point-1000-max {
+            float: none;
+        }
+    }
+    .money-down {
+        font: 400 1.1rem/1.2 @dosisregular;
+        color: #f60513;
+        position: relative;
+        left: 24%;
+        display: inline-block;
+        padding: 0 0 0 2%;
+        top: -5px;
+    }
+    .money-down-value {
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .money-down-arrow {
+        display: block;
+        background: url('../../resources/img/sprite-new-opt.png') no-repeat -63px -147px;
+        width: 8px;
+        height: 7px;
+        margin: 0 auto;
+    }
+    .money-block-photo {
+        vertical-align: bottom;
+        text-align: right;
+        height: 143px;
+        img {
+            opacity: .45;
+            @media @point-1366-max {
+                max-width: 100%;
+            }
+        }
+        @media @point-1250-max {
+            height: auto;
+            clear: both;
+            float: left;
+            text-align: left;
+        }
+        @media @point-1366-max {
+            //height: auto;
+        }
+    }
+}
+
+.block-testimonial-quote {
+    .__clearfix();
+    padding: 0.625em 0 0.313em;
+    blockquote {
+        font: 400 1.122em/1.6 @dosisregular;
+        color: #afafb1;
+        position: relative;
+        margin: 0.5em 0 0.313em 0;
+        text-indent: 17px;
+        padding: 0.125em 0 0 0px;
+        &::before,
+        &::after {
+            content: '';
+            position: relative;
+            display: inline-block;
+            background: url('../../resources/img/sprite-new-opt.png') no-repeat -58px -171px;
+            width: 18px;
+            height: 13px;
+        }
+        &::before {
+            margin: 0 0 0 -40px;
+            top: -15px;
+        }
+        &::after {
+            transform: rotate(180deg);
+            top: -4px;
+            right: -3px;
+        }
+        @media @point-1250-max {
+            br {
+                display: none;
+            }
+        }
+        @media @point-760-max {
+            font-size: 1.3em;
+        }
+    }
+    p {
+        font: 600 1rem/1 dosismedium;
+        text-align: right;
+        color: #9b9c9e;
+    }
+    @media @point-1100-max {
+        margin: 0 35px 0 20px;
+    }
+}
+
+.description-bitcoints {
+    clear: both;
+    padding: 0.9em 0 2em 0;
+    h2 {
+        color: #3197ff;
+        font: 400 1.5em/1.3 @dosisregular;
+        text-transform: uppercase;
+        margin: 0 0 0.6em 0;
+        @media @point-1100-max {
+            margin: 0 0 0.3em 0;
+        }
+        @media @point-1000-max {
+            br {
+                display: none;
+            }
+        }
+    }
+    p {
+        color: #e1e1e1;
+        font: 400 1.125em/1.6 @dosisregular;
+        @media @point-840-max {
+            br {
+                display: none;
+            }
+        }
+    }
+    @media @point-1250-max {
+        padding: 0 0 1.5em 0;
+    }
+    @media @point-1366-max {
+        //padding: 0 0 0.5em 0;
+    }
+}
+
+.description-bitcoints-bottom {
+    width: 442px;
+    padding: 0.5em 0 0 0;
+    @media @point-1250-max {
+        width: 335px;
+    }
+    @media @point-1000-max {
+        width: 50%;
+        padding: 0;
+    }
+    @media @point-840-max {
+        width: 45%;
+    }
+    @media @point-760-max {
+        width: 100%;
+    }
+}
+
+.wrap-bg-money {
+    position: relative;
+    @media @point-1000-max {
+        position: initial;
+    }
+    @media @point-900-max {
+        padding: 2% 0 0 0;
+    }
+}
+
+.bg-money {
+    position: absolute;
+    right: -128px;
+    z-index: 5;
+    bottom: -19px;
+    @media @point-1340-min {
+        height: 575px;
+    }
+    @media @point-1366-max {
+        //height: 535px;
+    }
+    @media @point-1340-max {
+        height: 520px;
+    }
+    @media @point-1250-max {
+        height: 500px;
+    }
+    @media @point-1100-max {
+        height: 470px;
+    }
+    @media @point-1000-max {
+        height: 350px;
+        bottom: 0;
+    }
+    @media @point-900-max {
+        height: 320px;
+        bottom: 0;
+    }
+    @media @point-840-max {
+        height: 310px;
+    }
+    @media @point-760-max {
+        display: none;
+    }
+}
+
+.alert-error {
+    color: #fff;
+    padding: 3px 6px;
+  border: 1px solid transparent;
+  color: #fff;
+  margin: 2px 0;
+  background: #db5e5e;
+  font: 400 13px/1 @dosisregular;
+  border-radius: 3px;
+
+}
+
+.alert {
+
+}
+
+.submitErrors {
+  margin: 15px 0 10px;
+  clear: both;
+  position: relative;
+  z-index: 99;
+  float: left;
+  width: 100%;
+}
+.error {
+   color: #ff0000;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-bottom: 0;
+}
+ 
+.inputTxtError {
+   border: 1px solid #ff0000;
+   color: #0e0e0e;
+}
+
+.email-exist {
+    color: #fff;
+    padding: 3px 6px;
+  border: 1px solid transparent;
+  color: #fff;
+  margin: 2px 0;
+  background: #db5e5e;
+  font: 400 13px/1 @dosisregular;
+  border-radius: 3px;
+}
+
+.email-free {
+
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  color: #fff;
+  margin: 2px 0;
+  background: #30a422;
+  font: 400 13px/1 'dosisregular', arial, sans-serif;
+  border-radius: 3px;
+}
+
+.email-status {
+    margin: 20px 0 0 0;
+}
