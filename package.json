@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SergiiManiuk/lp#readme",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.14.0",
     "cssnext": "^1.8.4",
     "gulp": "^3.9.1",
