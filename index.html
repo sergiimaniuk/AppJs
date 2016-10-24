@@ -1,101 +1,89 @@
-    <!doctype html>
-    <html lang="en">
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Add Users</title>
-        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="./dist/css/style.css" rel="stylesheet">
-    </head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Users</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./dist/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="listWinners wrapper form-horizontal">
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="listWinners col-md-5 form-horizontal">
-                    <div class="form-rundom-winner">
-                        <div class="winner-cell new-winner-cell">
-                            <p>Winner:</p>
-                        </div>
-                        <div class="winner-cell new-winner-cell-name">
-                            <p id="addWinner">Stepan</p>
-                        </div>
-                        <div class="winner-cell new-winner-cell-btn"><a href="#" id="newInner" class="new-inner">New Winner</a ></div>
-                        </div>
-                        <h1>Register form</h1>
-                        <div id="formRundomWinner">
-                            <form id="validateForm"  class="validateForm" >
-                                <table class="table">
-                                    <tr>
-                                                <td><label for="name">Name</label>
-                                            </td>
-                                            <td>
-                                                <input type="text" id="name" name="name" placeholder="Name" class="validate" data-error="Please enter your firstname" value="Sergey">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <label for="surname">Surname</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="surname" name="surname" class="validate" placeholder="Surname" data-error="Please enter your lastname" value="Senge">
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                            <td>  <label for="email">Email</label>
-                                        </td>
-                                        <td>
-                                            <input id="email" name="email" type="email" class="email validate" placeholder="Email" data-error="Please enter a valid email address" value="sdfsdf@gmail.com">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>  <label for="phone">Phone</label>
-                                    </td>
-                                    <td>
-                                        <input id="phone" name="phone" type="number" class="phone validate" placeholder="Email" data-error="Please enter a valid phone address" value="234234">
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="txtDOB">Date of Birth:</label>
-                                        </td>
-                                        <td>
-                                            <input id="month" class="month" type="number" size="3" name="month" min="1" max="12" value="1">
-                                            <input id="date" class="date"  type="number" size="2" name="date" min="1" max="31" value="1">
-                                            <input id="year" class="year"  type="number" size="3" name="year" min="1950" max="2020" value="1"> &nbsp;
-                                            <span class="datePattern">month // date //year</span>
-                                        </td>
-                                    </tr>
-                            </table>
-                            <div class="submittt">
-                                <input type="submit" id="submitt" value="Добавить" class="btn btn-warning btn-large rowSubmit">
-                            </div>
-                            </form>
-                        </div>
+              <div class="form-rundom-winner">
+                <div class="winner-cell new-winner-cell">
+                  <p>Winner:</p>
+                </div>
+                <div class="winner-cell new-winner-cell-name">
+                  <p id="addWinner">Stepan</p>
+                </div>
+                <div class="winner-cell new-winner-cell-btn"><a href="#" id="newInner" class="btn btn-primary btn-large newInner">New Winner</a></div>
+              </div>
 
+         
+          <div class="wrapper">
+                <form class="validateForm newForm">
+                  <h1>Register form</h1>
+                  <table>
+                    <tr>
+                      <td><label for="name">Name</label>
+                      </td>
+                      <td>
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Name"
+                          data-error="Please enter your firstname" value="Sergey">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="surname">Surname</label>
+                      </td>
+                      <td>
+                        <input type="text" id="surname" name="surname" class="form-control" placeholder="Surname"
+                          data-error="Please enter your lastname" value="Dee">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="email">Email</label>
+                      </td>
+                      <td>
+                        <input id="email" name="email" type="email" class="form-control" placeholder="Email"
+                          data-error="Please enter a valid email address" value="sdfsdf@gmail.com">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="phone">Phone</label>
+                      </td>
+                      <td>
+                        <input id="phone" name="phone" type="number" class="form-control" placeholder="Phone"
+                           value="234234">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label>Date of Birth</label>
+                      </td>
+                      <td>
+                        <input name="date" type="text" placeholder="Date" data-error="Please enter a valid Date" class="form-control" value="">
+                        <span class="datePattern">date/month/year</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="submittt">
+                    <input type="submit" id="submitt" value="Добавить" class="btn btn-primary btn-large mainSubmit">
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
     </div>
-
-
     </div>
-
-    </div>
-    </div>
-
-    <input id="task"><button id="add">Add</button>
-    <div id="todos"></div>
-
     <br>
     <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
     <script src="./src/javascript/main.js"></script>
-    </body>
-    </html>
+  </body>
+</html>
