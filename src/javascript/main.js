@@ -26,7 +26,6 @@
             return element;
         },
         fillingInputs: function(selectFormClass) {
-          //console.log(selectFormClass)
             var row = table.insertRow(-1),
                 listClassesEdit = 'rowEdit btn btn-info glyphicon glyphicon-edit',
                 listClassesSubmit = 'rowSubmit btn btn-success glyphicon glyphicon-ok',
@@ -49,7 +48,6 @@
             return row;
         },
         validateEmail: function(email) {
-
             if (!email) return true;
             var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if (email.value.match(mailFormat)) {
@@ -155,19 +153,16 @@
                 cell.appendChild(input);
             }
         },
-
         submit: function(row, target, selectorForm, startForm) {
             var classForm = [].indexOf.call(row.classList, startForm) !== -1;
             this.fillingDataToInput(row, target, classForm, selectorForm);
         },
-
         remove: function(row) {
             var isRemove = confirm("Are you sure?");
             if (isRemove) {
                 row.remove()
             }
         },
-
         initFirstDate: function() { //  dd/mm/yyyy,  dd-mm-yyyy or dd.mm.yyyy
             var date = document.getElementsByName("date")[0];
             if (date) {
@@ -176,35 +171,19 @@
             }
             return date.value;
         },
-
         rundomWinner: function(tableNewClass, selectFormClass) {
             var totalTable = document.querySelector('.'+tableNewClass),
-                totalWinners = totalTable.getElementsByTagName('tr'),
+                totalWinners = totalTable.querySelectorAll('tr'),
                 winnerId =  Math.floor(Math.random() * totalWinners.length) + 1;
 
-            //console.log(totalWinners)
-            //console.log(totalTable);
-//index = totalWinners[i]; //get the nth-child number here
-                console.log (totalWinners[i])
-                //console.log (winnerId)
-                // if (totalWinners[i] === winnerId) {
-                //     console.log('find')
-                //     alert('sdfsd')
-                // }
-            //var winnerName = totalTable;
-            //var index;
-            //var selector = document.getElementsByClassName('hardware');
-            for(var i = 0; i < totalWinners.length; i++) {
-                var total =+ totalWinners[i]
+            for(var i = 1; i < totalWinners.length+1; i++) {
+                if (  i = winnerId) {
+                    var winner = totalWinners[i-1].querySelector('td').textContent;
+                    document.getElementById('addWinner').innerHTML = winner;
+                    break;
+                }
             }
-            console.log(total)
-
-            //if (totalWinners > 0) {
-                
-                //console.log(winnerName);
-            //}
         },
-
         init: function(selectorForm, startForm, randomId) {
           var selectFormClass = selectorForm.slice(1),
             tableNewClass = 'listUsers';
@@ -214,7 +193,6 @@
             
             this.initFirstDate();
             this.fillingInputs(selectFormClass);
-
 
             document.querySelector('body').addEventListener('click', function(e) {
                 e.preventDefault();
@@ -248,14 +226,4 @@
         } while (target);
     }
     app.init('.validateForm', 'newForm', '.newInner');
-
-
-
-    
-
 }());
-
-
-
-
-
