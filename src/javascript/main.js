@@ -69,6 +69,19 @@
                 return false;
             }
         },
+        validatePhone: function(tel) {
+            // XXX-XXX-XXXX
+            // XXX.XXX.XXXX
+            // XXX XXX XXXX
+            if (!tel) return true;
+            var telFormat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (tel.value.match(telFormat)) {
+                return true;
+            } else {
+                this.markInput(tel);
+                return false;
+            }
+        },
         markInput: function(input) {
             var exixstError = input.parentNode.querySelector('.error-text');
             if (exixstError) {
@@ -94,8 +107,9 @@
         },
         fillingDataToInput: function(currentForm, target, classForm, selectorForm) {
             var isEmpty = false,
-                input, inputEmail, inputDate, checkEmailComplete, checkDateComplete,
+                input, inputEmail, inputDate, checkEmailComplete, checkDateComplete, checkPhoneComplete
                 inputs = currentForm.querySelectorAll('input:not([type=submit])');
+
             /* Begin check fields */
             var inputs = currentForm.querySelectorAll('input:not([type=submit])');
             for (var i = 0; i < inputs.length; i++) {
@@ -110,13 +124,16 @@
                     checkEmailComplete = this.validateEmail(input);
                 }
                 if (input.getAttribute("name") === 'date') {
-                    checkDateComplete = this.validateEmail(inputDate);
+                    checkDateComplete = this.validateDate(input);
+                }
+                if (input.getAttribute("name") === 'phone') {
+                    checkPhoneComplete = this.validatePhone(input);
                 }
             }
             /* End check fields */
 
             /* If we are ready */
-            if (!isEmpty && checkEmailComplete && checkDateComplete) {
+            if (!isEmpty && checkEmailComplete) {
 
                 /* If main Form */
                 if (classForm) {
