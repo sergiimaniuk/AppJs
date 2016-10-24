@@ -1,4 +1,5 @@
 'use strict';
+
 (function() {
     var form, table, formInputs;
     var app = {
@@ -44,7 +45,7 @@
             colEdit.appendChild(this.addTagElement('button', listClassesEdit))
             colEdit.appendChild(this.addTagElement('button', listClassesSubmit));
             var colRemove = row.insertCell(-1);
-            colRemove.appendChild(this.addTagElement('button', listClassesRemove))
+            colRemove.appendChild(this.addTagElement('button', listClassesRemove));
             return row;
         },
         validateEmail: function(email) {
