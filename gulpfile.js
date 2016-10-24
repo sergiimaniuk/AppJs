@@ -61,13 +61,13 @@ gulp.task('less', function () {
         console.log('===========');
         this.emit('end');
     }))
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
     .pipe(concat('style.css'))
-    .pipe(cssmin())
-    .pipe(sourcemaps.write())
+    //.pipe(cssmin())
+    //.pipe(sourcemaps.write())
     .pipe(autoprefixer({ browsers: ["> 40%"] }))
     .pipe(gulp.dest(pathes.build.css))
     .pipe(reload({stream: true}));

@@ -1,227 +1,196 @@
 // Base
 @import "base/index";
 //Layouts
-@import "layouts/index";
+//@import "layouts/index";
 //Modules
-
-
-	body {
-	    background: #fff;
-	    color: #555;
-	}
-
-	.listUsers {
-		width: auto;
-		input[type="text"],
-		input[type="number"],
-		input[type="date"],
-		input[type="email"] {
-			width: 90px;
-		}
-	}
-
-.btn {
-	margin: 5px;
+body {
+    background: #fff;
+    color: #555;
 }
 
-	.wrapper {
-	    padding: 10px 20px;
-	    max-width: 1000px !important;
-	    min-width: 600px !important;
-	}
-	
-	.form-horizontal {
-	    //display: inline-block;
-	    //width: 450px;
-	}
-	
-	.container-register {
-	    display: inline-block;
-	    border: 1px solid #ccc;
-	    padding: 5px 10px 5px;
-	}
-	
-	.form-group {
-	    padding: 0px 5px;
-	    &::after {
-	        content: '';
-	        clear: both;
-	        display: table;
-	    }
-	}
-	
-	.form-group-submit {
-	    text-align: right;
-	    padding: 10px 0 5px 0;
-	}
-	
-	.container-register {
-	    label {
-	        width: 100px;
-	        font-family: 'dosismedium';
-	        float: left;
-	        text-align: right;
-	        padding: 5px 20px 20px 5px;
-	    }
-	    input {
-	        width: 280px;
-	        float: left;
-	    }
-	}
-	
-	.btn {
-	    // margin: 0 0 0 100px;
-	    // background: transparent;
-	    // border: 1px solid #000;
-	    // padding: 5px 20px;
-	    // color: #000;
-	}
-	
-	.form-horizontal-register {
-	    display: inline-block;
-	    padding: 20px;
-	}
-	.wrapper {
-		width:1000px;
-		margin: 0 auto;
-	}
-	table {
-	    // width: 100%;
-	    // border-collapse: collapse;
-	    // margin: 20px 0;
-	    // border: 1px solid #868383;
-	    font-size: 15px;
-	    tr {
-	        //padding: 5px;
-	    }
-	    th,
-	    td {
-	        padding: 7px;
-	        border: 1px solid #868383;
-	        text-align: left;
-	    }
-	    th {
-	        
-	    }
-	}
-	
-	#listUsers {
-	    th,
-	    td {
-	        border-left: 1px solid #868383;
-	        border-bottom: 1px solid #868383;
-	    }
-	}
-	
-	h1 {
-	    text-align: center;
-	    margin: 0;
-	    font-size: 19px;
-	}
-	.newInner{
-	        // padding: 5px 20px;
-	        // background: transparent;
-	        // color: #000;
-	        // border: 1px solid #000;
-	        color: #fff !important;
-	    }
-	.form-rundom-winner {
-border: 1px solid #ccc;
+.listUsers {
+    width: auto;
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"] {
+        width: 90px;
+    }
+}
+
+.btn {
+    margin: 5px;
+}
+
+.wrapper {
+    padding: 10px 20px;
+    max-width: 1000px !important;
+    min-width: 600px !important;
+}
+
+.container-register {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px;
+}
+
+.form-group {
+    padding: 0px 5px;
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+.form-group-submit {
+    text-align: right;
+    padding: 10px 0 5px 0;
+}
+
+.container-register {
+    label {
+        width: 100px;
+        font-family: 'dosismedium';
+        float: left;
+        text-align: right;
+        padding: 5px 20px 20px 5px;
+    }
+    input {
+        width: 280px;
+        float: left;
+    }
+}
+
+.form-horizontal-register {
+    display: inline-block;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+table {
+    font-size: 15px;
+    th,
+    td {
+        padding: 7px;
+        border: 1px solid #868383;
+        text-align: left;
+    }
+    th {}
+}
+
+#listUsers {
+    th,
+    td {
+        border-left: 1px solid #868383;
+        border-bottom: 1px solid #868383;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 19px;
+}
+
+.newInner {
+    color: #fff !important;
+}
+
+.form-rundom-winner {
+    border: 1px solid #ccc;
     padding: 15px 10px;
     margin: 5px 0 0 20px;
     width: 300px;
-
-	    &::after {
-	        content: '';
-	        clear: both;
-	        display: table;
-	    }
-	    span,
-	    p {
-	        padding: 10px 0 5px;
-	        font-weight: 600;
-	    }
-	}
-	
-	.form-rundom-winner {
-	    border: 1px solid #ccc;
-	    margin: 5px 0 0 20px;
-	    padding: 15px 10px;
-	    width: 300px;
-	    .new-inner {
-	        padding: 5px 20px;
-	        background: transparent;
-	        color: #000;
-	        border: 1px solid #000;
-	        display: inline-block;
-	    }
-	    .winner-cell {
-	        //display: table-cell;
-	        vertical-align: middle;
-	        display: inline-block;
-	    }
-	    &::after {
-	        content: '';
-	        clear: both;
-	        display: table;
-	    }
-	    span {
-	        font: 600 14px/1.5 Arial;
-	    }
-	}
-	
-	.new-winner-cell {
-	    margin: 0 5px 0 0;
-	    //width: 33%;
-	}
-	
-.listUsers {
-	width: 400px;
-	td {
-		input {
-
-		}
-	}
-}	
-
-.edit, .remove, .submit {
-	display:block;
-	width: 30px;
-	cursor: pointer;
-	height: 40px;
-	color: #000;
-
-	&:hover {
-	color: #000;
-	}
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    span,
+    p {
+        padding: 10px 0 5px;
+        font-weight: 600;
+    }
 }
 
-	.new-winner-cell {}
-	
-	.new-winner-cell-name {}
-	
-	.validateForm {
-		width: 300px;
-		h1 {
-			margin: 0 0 15px 0;
-		}
-	    label {
-	        width: 100px;
-	        display: block;
-	        text-align: right;
-	    }
-	}
-	
-	.validateForm .error {
-	    border-color: red;
-	}
-	
-	.validateForm .error-text {
-	    display: block;
-	    color: red;
-	    font-size: 0.8em;
-	}
-	
-	.new-winner-cell-btn {
-	    float: right;
-	}
+.form-rundom-winner {
+    border: 1px solid #ccc;
+    margin: 5px 0 0 20px;
+    padding: 15px 10px;
+    width: 300px;
+    .new-inner {
+        padding: 5px 20px;
+        background: transparent;
+        color: #000;
+        border: 1px solid #000;
+        display: inline-block;
+    }
+    .winner-cell {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    span {
+        font: 600 14px/1.5 Arial;
+    }
+}
+
+.new-winner-cell {
+    margin: 0 5px 0 0;
+    //width: 33%;
+}
+
+.listUsers {
+    width: 400px;
+    td {
+        input {}
+    }
+}
+
+.edit,
+.remove,
+.submit {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    height: 40px;
+    color: #000;
+    &:hover {
+        color: #000;
+    }
+}
+
+.validateForm {
+    width: 300px;
+    h1 {
+        margin: 0 0 15px 0;
+    }
+    label {
+        width: 100px;
+        display: block;
+        text-align: right;
+    }
+}
+
+.validateForm .error {
+    border-color: red;
+}
+
+.validateForm .error-text {
+    display: block;
+    color: red;
+    font-size: 0.8em;
+}
+
+.new-winner-cell-btn {
+    float: right;
+}
